@@ -1,0 +1,67 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="adminLayout.master.cs" Inherits="musicsWeb.adminLayout" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title><asp:ContentPlaceHolder ID="adminHead" runat="server">
+    </asp:ContentPlaceHolder></title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="../css/boostrap/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/layoutAdmin.css" />
+    <link rel="stylesheet" type="text/css" href="../css/country.css" />
+    <script src="../css/jquery/jquery.js" type="text/javascript"></script>
+    <script src="../css/jquery/bootstrap.min.js" type="text/javascript"></script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="container1">
+            <div class="toolBar">
+                <div class="icon">Admin Panel</div>
+                <div class="login">Xin chào Admin, đăng xuất</div>
+            </div>
+            <div class="sidebar">
+                <ul class="list">
+                    <li id="songManager" onclick="selectPanel('songManager')">Quản lý bài hát</li>
+                    <li onclick="selectPanel('#')">Quản lý Album</li>
+                    <li id="singerManager" onclick="selectPanel('singerManager')">Quản lý ca sĩ</li>
+                    <li id="catergory" onclick="selectPanel('catergory')">Quản lý thể loại</li>
+                    <li id="countriesManager" onclick="selectPanel('countriesManager')">Quản lý quốc gia</li>
+                </ul>
+            </div>
+            <div class="main">
+                <asp:ContentPlaceHolder ID="adminContent" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+    </form>
+    <script>
+        function selectPanel(params) {
+            const paramsArr = window.location.pathname.split('/');
+            const paramsPrev = paramsArr[2];
+            const newParams = window.location.href.replace(paramsPrev, params);
+            window.location.href = newParams;
+        }
+
+        window.onload = function () {
+            const paramsArr = window.location.pathname.split('/');
+            if (paramsArr[2] == 'songManager') {
+                document.getElementById('songManager').style.background = '#CEECF5';
+                document.getElementById('songManager').style.color = '#0795db';
+            }
+            if (paramsArr[2] == 'countriesManager') {
+                document.getElementById('countriesManager').style.background = '#CEECF5';
+                document.getElementById('countriesManager').style.color = '#0795db';
+            }
+            if (paramsArr[2] == 'catergory') {
+                document.getElementById('catergory').style.background = '#CEECF5';
+                document.getElementById('catergory').style.color = '#0795db';
+            }
+            if (paramsArr[2] == 'singerManager') {
+                document.getElementById('singerManager').style.background = '#CEECF5';
+                document.getElementById('singerManager').style.color = '#0795db';
+            }
+        };
+    </script>
+</body>
+</html>

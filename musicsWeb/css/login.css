@@ -1,0 +1,39 @@
+﻿body {
+    font-family: sans-serif;
+}
+
+.formDiv {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    padding: 30px;
+    width: 500px;
+    text-align: center;
+    margin-top: 200px;
+    border: solid 1px #fff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.username {
+    padding: 0 20px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.errMess {
+    display: block;
+    padding: 3px;
+    font-size: 11px;
+}
+
+.btnLogin {
+    font-size: 20px;
+    width: 200px;
+    height: 40px;
+    margin: 10px 0;
+}
+
+.textField {
+    text-align: center;
+    font-size: 18px;
+}

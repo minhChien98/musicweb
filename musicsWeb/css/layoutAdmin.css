@@ -1,0 +1,78 @@
+﻿* {
+    margin: 0;
+    padding: 0; 
+}
+
+html, body {
+    font-family: sans-serif;
+    height: 100%;
+}
+
+.aspNetHidden {
+    height: 0%;
+}
+
+.sidebar {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    width: 15%;
+    position: fixed;
+    height: 100%;
+    margin: 0;
+    top: 50px;
+    left: 0;
+}
+
+.main {
+    width: 83%;
+    float: right;
+    padding: 35px;
+    padding-left: 0px;
+    margin-top: 30px;
+    z-index: 9;
+}
+
+.toolBar {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.15), 0 10px 10px rgba(0,0,0,0.08);
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    top: 0px;
+    z-index:999000;
+}
+
+.login {
+    float: right;
+    margin-right: 20px;
+    width: 30%;
+    text-align: right;
+    line-height: 50px;
+}
+
+.icon {
+    margin: 0;
+    float: left;
+    margin-left: 50px;
+    line-height: 50px;
+    font-size: 30px;
+    width: 30%;
+}
+
+.list {
+    padding-top: 30px;
+    list-style: none;
+}
+
+.list li {
+    padding: 20px 0;
+    padding-left: 50px;
+}
+
+.list li:hover {
+    background: #94F2FF;
+    cursor: pointer;
+    color: #0795db;
+}
+
+.list li:active {
+    color: #0795db;
+}
